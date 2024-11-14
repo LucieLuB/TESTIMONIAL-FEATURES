@@ -1,0 +1,111 @@
+/*BASIC RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+:root {
+  --moderate-violet-color: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue-color: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue-color: hsl(219, 29%, 14%);
+  --light-gray-color: rgb(207, 207, 207);
+  --light-grayish-blue-color: hsl(210, 46%, 95%);
+  --white-color: hsl(0, 0%, 100%);
+}
+
+body {
+  max-width: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+  min-height: 100vh;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: var(--light-grayish-blue-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 8px;
+  color: var(--light-gray-color);
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:nth-of-type(1) {
+  background-color: var(--moderate-violet-color);
+}
+
+.card:nth-of-type(2) {
+  background-color: var(--very-dark-grayish-blue-color);
+}
+
+.card:nth-of-type(3) {
+  background-color: var(--white-color);
+  color: var(--very-dark-grayish-blue-color);
+}
+
+.card:nth-of-type(4) {
+  background-color: var(--very-dark-blackish-blue-color);
+}
+
+.card:nth-of-type(5) {
+  background-color: var(--white-color);
+  color: var(--very-dark-grayish-blue-color);
+}
+
+.userProfil {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.userProfil__img {
+  border-radius: 50%;
+}
+
+.userCardName {
+  display: flex;
+  flex-direction: column;
+}
+
+.userCardName__name {
+}
+
+.userCardName__role {
+  color: rgba(207, 207, 207, 0.5);
+}
+
+.userTestimonialCard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.userTestimonialCard__introduction {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  color: var(--white-color);
+}
+
+.userTestimonialCard__text {
+  color: rgba(207, 207, 207, 0.7);
+}
