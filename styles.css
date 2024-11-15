@@ -37,7 +37,8 @@ body {
 @media (min-width: 1024px) {
   body {
     max-width: 1440px;
-    margin: 4rem;
+    margin-left: 4rem;
+    margin: 0 auto;
   }
 }
 
@@ -52,6 +53,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
+    margin: 4rem;
   }
 
   .container .card:nth-child(1) {
