@@ -29,15 +29,55 @@ body {
   min-height: 100vh;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-family: "Barlow Semi Condensed", sans-serif;
   background-color: var(--light-grayish-blue-color);
+}
+
+@media (min-width: 1024px) {
+  body {
+    max-width: 1440px;
+    margin: 4rem;
+  }
 }
 
 .container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .container .card:nth-child(1) {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .container .card:nth-child(2) {
+    grid-column: 3 / span 1;
+    grid-row: 1;
+  }
+
+  .container .card:nth-child(3) {
+    grid-column: 1 / span 1;
+    grid-row: 2;
+  }
+
+  .container .card:nth-child(4) {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+  }
+
+  .container .card:nth-child(5) {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 2;
+  }
 }
 
 .card {
@@ -47,6 +87,12 @@ body {
   gap: 2rem;
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .card {
+    padding: 3rem;
+  }
 }
 
 .card:nth-of-type(1) {
@@ -59,7 +105,6 @@ body {
 
 .card:nth-of-type(3) {
   background-color: var(--white-color);
-  color: var(--very-dark-grayish-blue-color);
 }
 
 .card:nth-of-type(4) {
@@ -68,7 +113,16 @@ body {
 
 .card:nth-of-type(5) {
   background-color: var(--white-color);
+}
+
+.card:nth-of-type(3),
+.card:nth-of-type(5) {
   color: var(--very-dark-grayish-blue-color);
+}
+
+.card:nth-of-type(3) *,
+.card:nth-of-type(5) * {
+  color: inherit;
 }
 
 .userProfil {
@@ -86,9 +140,6 @@ body {
   flex-direction: column;
 }
 
-.userCardName__name {
-}
-
 .userCardName__role {
   color: rgba(207, 207, 207, 0.5);
 }
@@ -100,7 +151,7 @@ body {
 }
 
 .userTestimonialCard__introduction {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 500;
   letter-spacing: 0.1rem;
   color: var(--white-color);
@@ -108,4 +159,5 @@ body {
 
 .userTestimonialCard__text {
   color: rgba(207, 207, 207, 0.7);
+  line-height: 1.8;
 }
